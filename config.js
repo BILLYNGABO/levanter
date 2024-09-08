@@ -9,7 +9,7 @@ const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
+  SESSION_ID: (process.env.SESSION_ID || 'levanter_9edb9a2a2d74048f197c1ef7f529b8bc2').trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
@@ -50,7 +50,7 @@ module.exports = {
   MAX_UPLOAD: process.env.MAX_UPLOAD || 230,
   REJECT_CALL: process.env.REJECT_CALL,
   VPS: toBool(process.env.VPS),
-  AUTO_STATUS_VIEW: (process.env.AUTO_STATUS_VIEW || 'false').trim(),
+  AUTO_STATUS_VIEW: (process.env.AUTO_STATUS_VIEW || 'true').trim(),
   SEND_READ: process.env.SEND_READ,
   KOYEB: toBool(process.env.KOYEB),
   KOYEB_NAME: (process.env.KOYEB_NAME || '').trim(),
@@ -58,7 +58,7 @@ module.exports = {
   AJOIN: process.env.AJOIN,
   GPT: (process.env.GPT || 'free').trim(),
   MODEL: (process.env.MODEL || 'gpt-3.5-turbo').trim(),
-  APPROVE: (process.env.APPROVE || '').trim(),
+  APPROVE: (process.env.APPROVE || 'true').trim(),
   ANTI_DELETE: (process.env.ANTI_DELETE || 'null').trim(),
   PERSONAL_MESSAGE: (process.env.PERSONAL_MESSAGE || 'null').trim(),
   DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE
